@@ -3,16 +3,16 @@
   /* START COLORS */
 
   /* theme colors */
-  --color-primary: #fff8d2;
-  --color-primary-op-80: rgba(255, 248, 210, 0.8);
-  --color-secondary: #711f0e;
-  --color-third: #E9401E;
+  --color-primary: #8C60FE;
+  --color-done: #77F583;
+  --color-warning: #FEDB60;
+  --color-error: #FE6060;
+  --color-background: #FDF4EF;
 
   /* neutrals colors */
-  --neutral-black: #0c0c0c;
-  --neutral-grey-0: #404040;
-  --neutral-grey-1: #808080;
-  --neutral-white: #fff;
+  --neutral-black: #3E2A70;
+  --neutral-grey: #EDEDEE;
+  --neutral-white: #FFFFFF;
   /* END COLORS */
 
   /* START FONT SIZES */
@@ -79,7 +79,9 @@
   /* END SPACING */
 
   /* START RADIUS */
+  --border-radius-0: 4px;
   --border-radius-1: 8px;
+  --border-radius-2: 12px;
   /* END RADIUS */
 
   /* BOX SHADOWS */

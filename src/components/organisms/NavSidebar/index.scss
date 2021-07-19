@@ -29,6 +29,10 @@
         font-weight: 600;
       }
     }
+    
+    &:hover {
+      cursor: pointer;
+    }
 
     &__icon {
       margin-bottom: var(--spacing-4);
