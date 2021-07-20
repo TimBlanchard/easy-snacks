@@ -3,6 +3,7 @@ import Logo from "../../atoms/Logo";
 import Button from "../../atoms/Button";
 import './index.scss'
 import DispensersState from "../DispensersState";
+import LoginInfo from "../../molecules/LoginInfo";
 
 export default function NavHeader() {
 
@@ -14,6 +15,7 @@ export default function NavHeader() {
             </div>
             <div className="nav-header__block--right">
                 <Button icon="/assets/images/icons/cloche.png" className="btn--primary" text='12 alertes' />
+                <LoginInfo/>
             </div>
         </div>
     )

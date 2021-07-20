@@ -6,9 +6,9 @@ export default function DispensersState() {
 
     return (
         <div className="dispensers-state">
-            <IndicatorStateWithText warningState={'good'} text="214 fonctionnels"/>
-            <IndicatorStateWithText warningState={'warning'} text="37 en réparation" />
-            <IndicatorStateWithText warningState={'error'} text="6 hors-service"/>
+            <IndicatorStateWithText warningState={'good'} value="214" text="fonctionnels"/>
+            <IndicatorStateWithText warningState={'warning'} value="37" text="en réparation" />
+            <IndicatorStateWithText warningState={'error'} value="6" text="hors-service"/>
         </div>
     )
 }

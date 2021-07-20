@@ -4,6 +4,7 @@
   width: fit-content;
   border-radius: var(--border-radius-1);
   padding: var(--spacing-3) var(--spacing-4);
+  cursor: pointer;
   &--primary {
     background: var(--color-primary);
     color: var(--neutral-white);

@@ -3,6 +3,8 @@
   display: flex;
   padding: var(--spacing-3) var(--spacing-7);
   align-items: center;
+  position: relative;
+  justify-content: space-between;
   &__block--left {
     display: flex;
     align-items: center;
@@ -10,5 +12,13 @@
   &__block--right {
     display: flex;
     align-items: center;
+    .login-info {
+      border-left: 1px solid var(--neutral-grey);
+      padding: 0 0 0 var(--spacing-5);
+      margin: 0 0 0 var(--spacing-6);
+    }
+  }
+  .logo {
+    margin-right: var(--spacing-6);
   }
 }
