@@ -2,6 +2,8 @@ import './styles/global.scss'
 import NavHeader from "./components/organisms/NavHeader";
 import NavSidebar from "./components/organisms/NavSidebar";
 import Landing from "./pages/Landing";
+import { Route } from "wouter";
+import SingleSchool from "./pages/SingleSchool";
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
         <NavHeader/>
         <main>
             <NavSidebar/>
-            <Landing />
+            <Route path="/" component={Landing}/>
+            <Route path="/schools/:name" component={SingleSchool}/>
         </main>
     </div>
   );
