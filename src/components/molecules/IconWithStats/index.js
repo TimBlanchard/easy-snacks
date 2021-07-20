@@ -10,7 +10,7 @@ export default function IconWithStats({title, period, value, type}) {
             <BoxIcon type={type} />
             <div className="iconWithStats__content">
                 <p className="iconWithStats__content__title">{title}<span> {period}</span></p>
-                <NumberFormat className="iconWithStats__content__value" value={value[0]} displayType={'text'} thousandSeparator={' '} suffix={value[1]} />
+                <NumberFormat className="iconWithStats__content__value" value={value[0]} displayType={'text'} thousandSeparator={' '} suffix={value[1]}  />
             </div>
         </div>
     )
