@@ -3,4 +3,12 @@
   display: flex;
   padding: var(--spacing-3) var(--spacing-7);
   align-items: center;
+  &__block--left {
+    display: flex;
+    align-items: center;
+  }
+  &__block--right {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.scss'
+import Button from "../../atoms/Button";
 
 export default function Error() {
 
@@ -13,7 +14,7 @@ export default function Error() {
                 </div>
             </div>
             <div className="error__right">
-                <button className="error__action">Résoudre les problèmes</button>
+                <Button className="btn--error" text='Résoudre les problèmes' />
                 <img className="error__exit" src="/assets/images/icons/exit.svg"/>
             </div>
         </div>
