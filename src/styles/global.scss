@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 
 // GLOBAL
 body {
@@ -6,6 +7,8 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--neutral-black);
+  font-family: 'Moderat', sans-serif;
+  font-weight: 400;
 
   .nav-header {
     height: 80px;
@@ -21,6 +24,14 @@ body {
       padding: var(--spacing-6);
     }
   }
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 // UTILITY CLASS
