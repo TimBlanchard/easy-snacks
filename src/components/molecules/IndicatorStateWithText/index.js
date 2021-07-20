@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 
-export default function Button({text, type, icon, className}) {
+export default function IndicatorStateWithText({text, type, icon, className}) {
 
     return (
         <div className={'btn ' + className}>
