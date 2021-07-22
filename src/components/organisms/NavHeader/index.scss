@@ -3,8 +3,13 @@
   display: flex;
   padding: var(--spacing-3) var(--spacing-7);
   align-items: center;
-  position: relative;
+  position: fixed;
   justify-content: space-between;
+  height: 65px;
+  width: calc(100vw - (var(--spacing-7) + var(--spacing-7)));
+  border-bottom: 1px solid var(--neutral-grey);
+  z-index: 999999;
+
   &__block--left {
     display: flex;
     align-items: center;
