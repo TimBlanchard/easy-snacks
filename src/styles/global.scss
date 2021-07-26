@@ -51,4 +51,10 @@ body {
     background: var(--neutral-white);
     padding: var(--spacing-6);
   }
+
+  .titleBox {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: var(--font-size-2);
+  }
 }

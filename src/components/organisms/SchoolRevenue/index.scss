@@ -1,0 +1,20 @@
+.school-revenue {
+  &__header {
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__period {
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+
+    &__montant {
+      font-size: var(--font-size-10);
+      font-weight: 700;
+      margin: var(--spacing-3) 0 var(--spacing-6);
+    }
+  }
+}

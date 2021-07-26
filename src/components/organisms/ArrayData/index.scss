@@ -51,6 +51,11 @@
       }
 
       td {
+        svg {
+          position: relative;
+          top: 2px;
+          margin-right: var(--spacing-2);
+        }
         .bold {
           font-weight: 700;
         }
@@ -76,6 +81,27 @@
           margin-left: var(--spacing-2);
           position: relative;
           top: -1px;
+        }
+        .status {
+          display : inline-block;
+          border-radius: var(--border-radius);
+          margin-right: var(--spacing-2);
+          width: 12px;
+          height: 12px;
+          position: relative;
+          top: 1px;
+
+          &--green {
+            background: var(--color-done);
+          }
+
+          &--orange {
+            background: var(--color-warning);
+          }
+
+          &--red {
+            background: var(--color-error);
+          }
         }
       }
     }

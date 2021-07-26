@@ -9,6 +9,7 @@
   top: 80px;
   left: 0;
   z-index: 99999;
+  border-right: 1px solid var(--neutral-grey);
 
   &__top,&__bottom {
     display: flex;
