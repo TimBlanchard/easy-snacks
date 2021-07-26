@@ -1,7 +1,43 @@
 .alert {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-5);
+
   &__box {
-    background: rgba(245, 73, 73, 0.38);
     height: 40px;
     width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-0);
+
+    &__red {
+      background: rgba(#FE6060, 0.08);
+    }
+
+    &__orange {
+      background: rgba(#FEDB60, 0.14);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -1px;
+    margin-left: var(--spacing-4);
+
+    p {
+      font-size: var(--font-size-4);
+
+      &.name {
+        font-weight: 700;
+        font-size: var(--font-size-5);
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
