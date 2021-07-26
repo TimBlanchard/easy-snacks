@@ -14,7 +14,7 @@ export default function NavHeader() {
                 <DispensersState/>
             </div>
             <div className="nav-header__block--right">
-                <Button icon="/assets/images/icons/cloche.svg" className="btn--primary" text='12 alertes' />
+                <Button icon="/assets/images/icons/cloche.png" className="btn--primary" text='12 alertes' />
                 <LoginInfo/>
             </div>
         </div>

@@ -1,5 +1,5 @@
 .arrayData {
-  padding: 0 !important;
+  padding: 0;
   margin-top: var(--spacing-6);
 
   table {
@@ -32,50 +32,18 @@
     }
 
     tbody {
-      tr {
-        &.clickable {
-          cursor: pointer;
-
-          &:hover {
-            background: rgba(0,0,0,.035);
-          }
-        }
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        &:hover {
-          background: rgba(0,0,0,.012);
-        }
+      tr:last-child {
+        border-bottom: none;
       }
 
       td {
-        .bold {
-          font-weight: 700;
-        }
-        .title {
-          font-weight: 900;
-        }
-        .arrowUp {
-          display : inline-block;
-          height : 0;
-          width : 0;
-          border-right : 6px solid transparent;
-          border-bottom : 8px solid var(--color-done);
-          border-left : 6px solid transparent;
-          margin-left: var(--spacing-2);
-        }
-        .arrowDown {
-          display : inline-block;
-          height : 0;
-          width : 0;
-          border-right : 6px solid transparent;
-          border-top : 8px solid var(--color-error);
-          border-left : 6px solid transparent;
-          margin-left: var(--spacing-2);
-          position: relative;
-          top: -1px;
+        span {
+          &.bold {
+            font-weight: 700;
+          }
+          &.title {
+            font-weight: 900;
+          }
         }
       }
     }
