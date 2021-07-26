@@ -1,82 +1,17 @@
 import React from 'react'
 import './index.scss'
 import {useTable, useSortBy} from 'react-table'
+import {Link} from "wouter";
 
-export default function ArrayData() {
+export default function ArrayData({listData, listColumns}) {
 
     const data = React.useMemo(
-        () => [
-            {
-                ecole: <><span className="title">Université de paris</span><br/>85 rue de la paix<br/>75001, Paris</>,
-                distrib: <><span className="bold">34</span><br/>sur 36</>,
-                vente: <><span className="bold">245</span></>,
-                revenu: <><span className="bold">435€</span></>,
-                somme: <><span className="bold">349€</span><br/>54% plein</>,
-                statut: <>OK</>,
-            },
-            {
-                ecole: <><span className="title">Lycée Jean Moulin</span><br/>34 rue de la paix<br/>75001, Paris</>,
-                distrib: <><span className="bold">34</span><br/>sur 36</>,
-                vente: <><span className="bold">245</span></>,
-                revenu: <><span className="bold">435€</span></>,
-                somme: <><span className="bold">349€</span><br/>54% plein</>,
-                statut: <>OK</>,
-            },
-            {
-                ecole: <><span className="title">Paris Descartes</span><br/>34 rue de la paix<br/>75001, Paris</>,
-                distrib: <><span className="bold">34</span><br/>sur 36</>,
-                vente: <><span className="bold">245</span></>,
-                revenu: <><span className="bold">435€</span></>,
-                somme: <><span className="bold">349€</span><br/>54% plein</>,
-                statut: <>OK</>,
-            },
-            {
-                ecole: <><span className="title">École Montreuil</span><br/>34 rue de la paix<br/>75001, Paris</>,
-                distrib: <><span className="bold">34</span><br/>sur 36</>,
-                vente: <><span className="bold">245</span></>,
-                revenu: <><span className="bold">435€</span></>,
-                somme: <><span className="bold">349€</span><br/>54% plein</>,
-                statut: <>OK</>,
-            },
-            {
-                ecole: <><span className="title">HETIC</span><br/>34 rue de la paix<br/>75001, Paris</>,
-                distrib: <><span className="bold">34</span><br/>sur 36</>,
-                vente: <><span className="bold">245</span></>,
-                revenu: <><span className="bold">435€</span></>,
-                somme: <><span className="bold">349€</span><br/>54% plein</>,
-                statut: <>OK</>,
-            }
-        ],
+        () => listData,
         []
     )
 
     const columns = React.useMemo(
-        () => [
-            {
-                Header: 'École',
-                accessor: 'ecole', // accessor is the "key" in the data
-            },
-            {
-                Header: 'Distrib. fonctionnels',
-                accessor: 'distrib',
-            },
-            {
-                Header: 'Ventes /7 jours',
-                accessor: 'vente',
-            },
-            {
-                Header: 'Revenus /7 jours',
-                accessor: 'revenu',
-            },
-            {
-                Header: 'Somme présente',
-                accessor: 'somme',
-            },
-            {
-                Header: 'Statut',
-                accessor: 'statut',
-            },
-        ],
+        () => listColumns,
         []
     )
 
@@ -112,17 +47,37 @@ export default function ArrayData() {
                 {
                     rows.map(row => {
                         prepareRow(row)
+                        console.log(row)
                         return (
-                            <tr {...row.getRowProps()}>
-                                {
-                                    row.cells.map(cell => {
-                                        return (
-                                            <td {...cell.getCellProps()}>
-                                                {cell.render('Cell')}
-                                            </td>
-                                        )
-                                    })}
-                            </tr>
+                            <>
+                                {listData[row.id].router ?
+                                    <Link href={"/schools/"+listData[row.id].router}>
+                                        <tr {...row.getRowProps()} className="clickable">
+                                            {
+                                                row.cells.map(cell => {
+                                                    return (
+                                                        <td {...cell.getCellProps()}>
+                                                            {cell.render('Cell')}
+                                                        </td>
+                                                    )
+                                                })}
+                                        </tr>
+                                    </Link>
+                                    : <tr {...row.getRowProps()}>
+                                        {
+                                            row.cells.map(cell => {
+                                                return (
+                                                    <td {...cell.getCellProps()}>
+                                                        {cell.render('Cell')}
+                                                    </td>
+                                                )
+                                            })}
+                                    </tr>
+                                }
+                            </>
+
+
+
                         )
                     })}
                 </tbody>
