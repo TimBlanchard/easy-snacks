@@ -2,6 +2,7 @@ import './styles/global.scss'
 import NavHeader from "./components/organisms/NavHeader";
 import NavSidebar from "./components/organisms/NavSidebar";
 import Landing from "./pages/Landing";
+import Alerts from "./pages/Alerts";
 import {Route} from "wouter";
 import SingleSchool from "./pages/SingleSchool";
 import SingleDistributeur from "./pages/SingleDistributeur";
@@ -13,6 +14,7 @@ function App() {
             <main>
                 <NavSidebar/>
                 <Route path="/" component={Landing}/>
+                <Route path="/notifications" component={Alerts}/>
                 <Route path="/schools/:name">
                     {(params) => <SingleSchool name={params.name}/>}
                 </Route>

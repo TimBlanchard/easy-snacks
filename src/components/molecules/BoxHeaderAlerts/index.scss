@@ -1,0 +1,36 @@
+.boxHeaderAlerts {
+  button {
+    background: var(--color-primary);
+    border: none;
+    color: var(--neutral-white);
+    font-weight: 900;
+    font-family: 'Moderat', sans-serif;
+    font-size: 16px;
+  }
+}
+
+.popover {
+  z-index: 999999;
+  background: var(--neutral-white);
+  width: fit-content;
+  max-width: 330px;
+  border-radius: var(--border-radius-1);
+  padding: var(--spacing-6);
+  margin-top: var(--spacing-6);
+  box-shadow: 0px 18px 63px rgba(72, 46, 138, 0.03), 0px 11.6667px 36.8958px rgba(72, 46, 138, 0.0227778), 0px 6.93333px 20.0667px rgba(72, 46, 138, 0.0182222), 0px 3.6px 10.2375px rgba(72, 46, 138, 0.015), 0px 1.46667px 5.13333px rgba(72, 46, 138, 0.0117778), 0px 0.333333px 2.47917px rgba(72, 46, 138, 0.00722222);
+
+  h3 {
+    color: var(--color-primary);
+    font-weight: 900;
+    margin-bottom: var(--spacing-6);
+  }
+
+  .popover-body > * {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
