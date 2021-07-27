@@ -1,6 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Summary from '../../components/organisms/Summary'
-import AlertHistoric from "../../components/organisms/AlertHistoric";
 import './index.scss'
 import ArrayData from "../../components/organisms/ArrayData";
 import {Link} from "wouter";
@@ -10,6 +9,7 @@ import BestSellers from "../../components/organisms/BestSellers";
 import HoursAffluence from "../../components/organisms/HoursAffluence";
 
 export default function Singledistributeur({id}) {
+
     const array = [
         {
             id: 1,
@@ -108,7 +108,6 @@ export default function Singledistributeur({id}) {
             stock: <>11 disponible<br/><div className="progressbar"><div className={progressStyle(11, 20, 'color')} style={{width: progressStyle(11, 20, 'number')+"%"}} /></div></>,
         }
     ]
-
     const arrayColumns = [
         {
             Header: 'Casier',
@@ -138,7 +137,6 @@ export default function Singledistributeur({id}) {
             statut: <><div className="status status--green"/> Réparé</>,
         },
     ]
-
     const arrayColumns2 = [
         {
             Header: 'Date',
@@ -161,7 +159,7 @@ export default function Singledistributeur({id}) {
     return (
         <div className="main-app single-distributeur">
             <div className="single-distributeur__header">
-                <Link href={"/"}>
+                <Link href={"/schools/UniversiteDeParis"}>
                     <div className="single-distributeur__header__back">
                         <img className="single-distributeur__header__back__icon" src="/assets/images/icons/back.svg"/>
                         Retour
