@@ -159,7 +159,7 @@ export default function Singledistributeur({id}) {
     return (
         <div className="main-app single-distributeur">
             <div className="single-distributeur__header">
-                <Link href={"/schools/UniversiteDeParis"}>
+                <Link href={"/ecole/UniversiteDeParis"}>
                     <div className="single-distributeur__header__back">
                         <img className="single-distributeur__header__back__icon" src="/assets/images/icons/back.svg"/>
                         Retour

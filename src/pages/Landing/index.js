@@ -1,17 +1,59 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Error from '../../components/organisms/Error'
 import Summary from '../../components/organisms/Summary'
 import ArrayData from '../../components/organisms/ArrayData';
 import Button from "../../components/atoms/Button";
+import {getSchoolsFromApiAsync, randomNumberInterval} from "../../services/network";
 
 export default function Landing() {
+    const [listSchool, setListSchool] = useState([]);
+    const [dataTable, setDataTable] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        getSchoolsFromApiAsync().then(data => {
+            setListSchool(data);
+        });
+    }, []);
+
+    const getDataArray = () => {
+        if(listSchool) {
+            let arrayData = [];
+            listSchool.forEach(
+                el => {
+                    const tempData = {
+                        ecole: <><span className="title">{el.name}</span><br/>{el.address}<br/>{el.zipCode}, {el.city}</>,
+                        distrib: <><span className="bold">{randomNumberInterval(0, 3)}</span><br/>sur 3</>,
+                        vente: <><span className="bold">{randomNumberInterval(250, 350)}</span></>,
+                        revenu: <><span className="bold">{randomNumberInterval(350, 500)}€</span> {randomNumberInterval(350, 500) < 420 ? <div className="arrowDown" /> : <div className="arrowUp" />}</>,
+                        somme: <><span className="bold">{randomNumberInterval(150, 300)}€</span><br/>{randomNumberInterval(30, 70)}% plein</>,
+                        statut: el.alerts.length > 0 ? <><Button className="btn--error" icon="/assets/images/icons/warning-white.svg" text={el.alerts.length+' alertes'} /></> : <><Button className="btn" text="OK" /></>,
+                        router: "/ecole/"+el.id
+                    }
+                    arrayData.push(tempData)
+                }
+            )
+            return arrayData;
+        }
+    }
+
+    useEffect(() => {
+        setDataTable(getDataArray());
+    }, [listSchool]);
+
+    useEffect(() => {
+        if(dataTable.length > 1) {
+            setLoading(true);
+        }
+    }, [dataTable]);
+
     const arraySummary = [
         {
             id: 1,
             title: 'Revenus',
             period: '/1 jour',
             values: {
-                number: 3487,
+                number: randomNumberInterval(1500, 4000),
                 symbole: '€',
                 position: 'suffix'
             },
@@ -22,7 +64,7 @@ export default function Landing() {
             title: 'Revenus',
             period: '/1 semaine',
             values: {
-                number: 12984,
+                number: randomNumberInterval(8000, 15000),
                 symbole: '€',
                 position: 'suffix'
             },
@@ -33,7 +75,7 @@ export default function Landing() {
             title: 'Revenus',
             period: '/1 mois',
             values: {
-                number: 48290,
+                number: randomNumberInterval(37000, 55000),
                 symbole: '€',
                 position: 'suffix'
             },
@@ -44,7 +86,7 @@ export default function Landing() {
             title: 'Revenus',
             period: '/1 an',
             values: {
-                number: 508488,
+                number: randomNumberInterval(321000, 478000),
                 symbole: '€',
                 position: 'suffix'
             },
@@ -52,53 +94,6 @@ export default function Landing() {
         }
     ]
 
-    const arrayData = [
-        {
-            ecole: <><span className="title">Université de paris</span><br/>85 rue de la paix<br/>75001, Paris</>,
-            distrib: <><span className="bold">34</span><br/>sur 36</>,
-            vente: <><span className="bold">245</span></>,
-            revenu: <><span className="bold">435€</span> <div className="arrowUp" /></>,
-            somme: <><span className="bold">349€</span><br/>54% plein</>,
-            statut: <><Button className="btn--error" icon="/assets/images/icons/warning-white.svg" text='2 alertes' /></>,
-            router: "/schools/UniversiteDeParis"
-        },
-        {
-            ecole: <><span className="title">Lycée Jean Moulin</span><br/>34 rue de la paix<br/>75001, Paris</>,
-            distrib: <><span className="bold">34</span><br/>sur 36</>,
-            vente: <><span className="bold">245</span></>,
-            revenu: <><span className="bold">435€</span> <div className="arrowUp" /></>,
-            somme: <><span className="bold">349€</span><br/>54% plein</>,
-            statut: <><Button className="btn" text='OK' /></>,
-            router: "/schools/LyceeJeanMoulin"
-        },
-        {
-            ecole: <><span className="title">Paris Descartes</span><br/>34 rue de la paix<br/>75001, Paris</>,
-            distrib: <><span className="bold">34</span><br/>sur 36</>,
-            vente: <><span className="bold">245</span></>,
-            revenu: <><span className="bold">435€</span> <div className="arrowDown" /></>,
-            somme: <><span className="bold">349€</span><br/>54% plein</>,
-            statut: <><Button className="btn--error" icon="/assets/images/icons/warning-white.svg" text='2 alertes' /></>,
-            router: "/schools/ParisDescartes"
-        },
-        {
-            ecole: <><span className="title">École Montreuil</span><br/>34 rue de la paix<br/>75001, Paris</>,
-            distrib: <><span className="bold">34</span><br/>sur 36</>,
-            vente: <><span className="bold">245</span></>,
-            revenu: <><span className="bold">435€</span> <div className="arrowUp" /></>,
-            somme: <><span className="bold">349€</span><br/>54% plein</>,
-            statut: <><Button className="btn" text='OK' /></>,
-            router: "/schools/EcoleMontreuil"
-        },
-        {
-            ecole: <><span className="title">HETIC</span><br/>34 rue de la paix<br/>75001, Paris</>,
-            distrib: <><span className="bold">34</span><br/>sur 36</>,
-            vente: <><span className="bold">245</span></>,
-            revenu: <><span className="bold">435€</span> <div className="arrowDown" /></>,
-            somme: <><span className="bold">349€</span><br/>54% plein</>,
-            statut: <><Button className="btn" text='OK' /></>,
-            router: "/schools/HETIC"
-        }
-    ]
     const arrayColumns = [
         {
             Header: 'École',
@@ -130,7 +125,9 @@ export default function Landing() {
         <div className="main-app landing">
             <Error title="3 de vos distributeurs sont en pannes." description="Une action immédiate de votre part est requise." button="Résoudre les problèmes" />
             <Summary array={arraySummary} />
-            <ArrayData listData={arrayData} listColumns={arrayColumns} />
+            {loading &&
+                <ArrayData listData={dataTable} listColumns={arrayColumns} />
+            }
         </div>
     )
 }

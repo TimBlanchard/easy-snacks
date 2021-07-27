@@ -53,7 +53,6 @@ export default function ArrayData({listData, listColumns, scroll}) {
                 {
                     rows.map(row => {
                         prepareRow(row)
-                        console.log(row)
                         return (
                             <>
                                 {listData[row.id].router ?

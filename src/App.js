@@ -15,10 +15,10 @@ function App() {
                 <NavSidebar/>
                 <Route path="/" component={Landing}/>
                 <Route path="/notifications" component={Alerts}/>
-                <Route path="/schools/:name">
-                    {(params) => <SingleSchool name={params.name}/>}
+                <Route path="/ecole/:id">
+                    {(params) => <SingleSchool id={params.id}/>}
                 </Route>
-                <Route path="/distributeurs/:id">
+                <Route path="/distributeur/:id">
                     {(params) => <SingleDistributeur id={params.id}/>}
                 </Route>
             </main>

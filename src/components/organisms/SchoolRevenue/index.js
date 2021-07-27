@@ -2,13 +2,14 @@ import React from 'react'
 import {Line} from 'react-chartjs-2';
 import './index.scss'
 import HeaderBox from '../../molecules/HeaderBox/'
+import {randomNumberInterval} from "../../../services/network";
 
 export default function SchoolRevenue() {
     const data = {
         labels: ['L', 'M', 'M', 'J', 'V', 'S'],
         datasets: [
             {
-                data: [100, 200, 750, 770, 1000, 1100, 1100],
+                data: [randomNumberInterval(200, 600), randomNumberInterval(200, 600), randomNumberInterval(200, 600), randomNumberInterval(200, 600), randomNumberInterval(200, 600), randomNumberInterval(200, 600), randomNumberInterval(200, 600)],
                 fill: false,
                 backgroundColor: '#8C60FE',
                 borderColor: '#8C60FE',
@@ -35,7 +36,7 @@ export default function SchoolRevenue() {
 
     return (
         <div className="school-revenue box-default">
-            <HeaderBox title="Revenus de l'école" montant="1048€" />
+            <HeaderBox title="Revenus de l'école" montant={randomNumberInterval(600, 1500)+"€"} />
             <Line data={data} options={options}/>
         </div>
     )

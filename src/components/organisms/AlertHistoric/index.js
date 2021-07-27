@@ -3,13 +3,22 @@ import './index.scss'
 import HeaderBox from "../../molecules/HeaderBox";
 import Alert from "../Alert";
 
-export default function AlertHistoric() {
+export default function AlertHistoric({alerts}) {
     return (
+        <>
+        {alerts.length > 0 &&
         <div className="alert-historic box-default">
-            <HeaderBox title="Historique des alertes" montant="3" />
-            <Alert type="red" title="#652" description="Distributeur en panne" />
-            <Alert type="orange" title="#152" description="Distributeur plein" />
-            <Alert type="red" title="#32" description="Distributeur en panne" />
+            {console.log(alerts)}
+            <HeaderBox title="Historique des alertes" montant={alerts.length} />
+            {alerts.map((alert) =>
+                alert.type === "temperature" ?
+                <Alert type="red" title={"#"+alert.id} description={alert.message} />
+                :
+                <Alert type="orange" title={"#"+alert.id} description={alert.message} />
+            )}
         </div>
+        }
+        </>
+
     )
 }
