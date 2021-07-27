@@ -3,7 +3,7 @@ import './index.scss'
 import {useTable, useSortBy} from 'react-table'
 import {Link} from "wouter";
 
-export default function ArrayData({listData, listColumns}) {
+export default function ArrayData({listData, listColumns, scroll}) {
 
     const data = React.useMemo(
         () => listData,
@@ -25,6 +25,12 @@ export default function ArrayData({listData, listColumns}) {
         prepareRow,
     } = tableInstance
 
+    const allowScroll = (bool) => {
+        if(bool === true) {
+            return "scrollArray";
+        }
+    }
+
     return (
         <div className="arrayData box-default">
             <table {...getTableProps()}>
@@ -43,7 +49,7 @@ export default function ArrayData({listData, listColumns}) {
                         </tr>
                     ))}
                 </thead>
-                <tbody {...getTableBodyProps()}>
+                <tbody {...getTableBodyProps()} className={allowScroll(scroll)}>
                 {
                     rows.map(row => {
                         prepareRow(row)
@@ -51,7 +57,7 @@ export default function ArrayData({listData, listColumns}) {
                         return (
                             <>
                                 {listData[row.id].router ?
-                                    <Link href={"/schools/"+listData[row.id].router}>
+                                    <Link href={listData[row.id].router}>
                                         <tr {...row.getRowProps()} className="clickable">
                                             {
                                                 row.cells.map(cell => {

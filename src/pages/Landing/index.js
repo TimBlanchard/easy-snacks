@@ -60,7 +60,7 @@ export default function Landing() {
             revenu: <><span className="bold">435€</span> <div className="arrowUp" /></>,
             somme: <><span className="bold">349€</span><br/>54% plein</>,
             statut: <><Button className="btn--error" icon="/assets/images/icons/warning-white.svg" text='2 alertes' /></>,
-            router: "UniversiteDeParis"
+            router: "/schools/UniversiteDeParis"
         },
         {
             ecole: <><span className="title">Lycée Jean Moulin</span><br/>34 rue de la paix<br/>75001, Paris</>,
@@ -69,7 +69,7 @@ export default function Landing() {
             revenu: <><span className="bold">435€</span> <div className="arrowUp" /></>,
             somme: <><span className="bold">349€</span><br/>54% plein</>,
             statut: <><Button className="btn" text='OK' /></>,
-            router: "LyceeJeanMoulin"
+            router: "/schools/LyceeJeanMoulin"
         },
         {
             ecole: <><span className="title">Paris Descartes</span><br/>34 rue de la paix<br/>75001, Paris</>,
@@ -78,7 +78,7 @@ export default function Landing() {
             revenu: <><span className="bold">435€</span> <div className="arrowDown" /></>,
             somme: <><span className="bold">349€</span><br/>54% plein</>,
             statut: <><Button className="btn--error" icon="/assets/images/icons/warning-white.svg" text='2 alertes' /></>,
-            router: "ParisDescartes"
+            router: "/schools/ParisDescartes"
         },
         {
             ecole: <><span className="title">École Montreuil</span><br/>34 rue de la paix<br/>75001, Paris</>,
@@ -87,7 +87,7 @@ export default function Landing() {
             revenu: <><span className="bold">435€</span> <div className="arrowUp" /></>,
             somme: <><span className="bold">349€</span><br/>54% plein</>,
             statut: <><Button className="btn" text='OK' /></>,
-            router: "EcoleMontreuil"
+            router: "/schools/EcoleMontreuil"
         },
         {
             ecole: <><span className="title">HETIC</span><br/>34 rue de la paix<br/>75001, Paris</>,
@@ -96,7 +96,7 @@ export default function Landing() {
             revenu: <><span className="bold">435€</span> <div className="arrowDown" /></>,
             somme: <><span className="bold">349€</span><br/>54% plein</>,
             statut: <><Button className="btn" text='OK' /></>,
-            router: "HETIC"
+            router: "/schools/HETIC"
         }
     ]
     const arrayColumns = [
@@ -128,7 +128,7 @@ export default function Landing() {
 
     return (
         <div className="main-app landing">
-            <Error />
+            <Error title="3 de vos distributeurs sont en pannes." description="Une action immédiate de votre part est requise." button="Résoudre les problèmes" />
             <Summary array={arraySummary} />
             <ArrayData listData={arrayData} listColumns={arrayColumns} />
         </div>

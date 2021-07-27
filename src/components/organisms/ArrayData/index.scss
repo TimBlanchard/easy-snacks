@@ -103,7 +103,48 @@
             background: var(--color-error);
           }
         }
+        .progressbar {
+          height: 4px;
+          width: 120px;
+          border-radius: var(--border-radius-0);
+          background: var(--neutral-grey);
+          margin-top: var(--spacing-3);
+          position: relative;
+          overflow: hidden;
+
+          > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+
+            &.gauge-red {
+              background: var(--color-error);
+            }
+            &.gauge-orange {
+              background: var(--color-warning);
+            }
+            &.gauge-green {
+              background: var(--color-done);
+            }
+          }
+        }
+        .linkRed {
+          color: var(--color-error);
+          text-decoration: underline;
+        }
       }
+
+      &.scrollArray {
+        overflow: auto;
+        max-height: 600px;
+        display: block;
+      }
+    }
+    thead, tbody tr {
+      display:table;
+      width:100%;
+      table-layout:fixed;
     }
   }
 }

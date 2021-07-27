@@ -1,0 +1,20 @@
+.single-seller {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-3) 0;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  &__id {
+    margin-right: var(--spacing-3);
+    font-size: var(--font-size-4);
+    width: 24px;
+  }
+
+  p {
+    font-weight: 500;
+  }
+}

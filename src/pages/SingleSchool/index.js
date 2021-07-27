@@ -46,119 +46,165 @@ export default function SingleSchool({name}) {
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>13°C</>,
-            vente: <><svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.07229L6.39122 9.31325L15.6469 2.07229L29.9599 8L35.7328 2L51 2" stroke="#3E2A70" stroke-width="2"/></svg> 236 <div className="arrowUp" /></>,
+            vente: <>
+                <svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1.07229L6.39122 9.31325L15.6469 2.07229L29.9599 8L35.7328 2L51 2" stroke="#3E2A70"
+                          stroke-width="2"/>
+                </svg>
+                236 <div className="arrowUp"/></>,
             localistation: <>Étage 1</>,
-            etat: <><div className="status status--green" /> OK</>,
+            etat: <>
+                <div className="status status--green"/>
+                OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>12°C</>,
-            vente: <><svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.07229L6.39122 2.31325L15.6469 5.07229L29.9599 2L35.7328 12L51 2" stroke="#3E2A70" stroke-width="2"/></svg> 124 <div className="arrowUp" /></>,
+            vente: <>
+                <svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8.07229L6.39122 2.31325L15.6469 5.07229L29.9599 2L35.7328 12L51 2" stroke="#3E2A70"
+                          stroke-width="2"/>
+                </svg>
+                124 <div className="arrowUp"/></>,
             localistation: <>Rez-de-chausée</>,
-            etat: <><div className="status status--orange" /> Réparation</>,
+            etat: <>
+                <div className="status status--orange"/>
+                Réparation</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>9°C</>,
-            vente: <><svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.07229L6.39122 4.31325L15.6469 11.07229L29.9599 2L35.7328 10L51 2" stroke="#3E2A70" stroke-width="2"/></svg> 187 <div className="arrowUp" /></>,
+            vente: <>
+                <svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5.07229L6.39122 4.31325L15.6469 11.07229L29.9599 2L35.7328 10L51 2" stroke="#3E2A70"
+                          stroke-width="2"/>
+                </svg>
+                187 <div className="arrowUp"/></>,
             localistation: <>Étage 1</>,
-            etat: <><div className="status status--green" /> OK</>,
+            etat: <>
+                <div className="status status--green"/>
+                OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>11°C</>,
-            vente: <><svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.07229L6.39122 10.31325L15.6469 4.07229L29.9599 9L35.7328 1L51 2" stroke="#3E2A70" stroke-width="2"/></svg> 201 <div className="arrowDown" /></>,
+            vente: <>
+                <svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 3.07229L6.39122 10.31325L15.6469 4.07229L29.9599 9L35.7328 1L51 2" stroke="#3E2A70"
+                          stroke-width="2"/>
+                </svg>
+                201 <div className="arrowDown"/></>,
             localistation: <>Étage 2</>,
-            etat: <><div className="status status--red" /> HS</>,
+            etat: <>
+                <div className="status status--red"/>
+                HS</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>13°C</>,
-            vente: <>236 <div className="arrowDown" /></>,
+            vente: <>236 <div className="arrowDown"/></>,
             localistation: <>Étage 1</>,
-            etat: <><div className="status status--green" /> OK</>,
+            etat: <>
+                <div className="status status--green"/>
+                OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>12°C</>,
-            vente: <>124 <div className="arrowUp" /></>,
+            vente: <>124 <div className="arrowUp"/></>,
             localistation: <>Rez-de-chausée</>,
             etat: <>Réparation</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>9°C</>,
-            vente: <>187 <div className="arrowUp" /></>,
+            vente: <>187 <div className="arrowUp"/></>,
             localistation: <>Étage 1</>,
             etat: <>OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>11°C</>,
-            vente: <>201 <div className="arrowUp" /></>,
+            vente: <>201 <div className="arrowUp"/></>,
             localistation: <>Étage 2</>,
             etat: <>HS</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>13°C</>,
-            vente: <>236 <div className="arrowUp" /></>,
+            vente: <>236 <div className="arrowUp"/></>,
             localistation: <>Étage 1</>,
             etat: <>OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>12°C</>,
-            vente: <>124 <div className="arrowDown" /></>,
+            vente: <>124 <div className="arrowDown"/></>,
             localistation: <>Rez-de-chausée</>,
             etat: <>Réparation</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>9°C</>,
-            vente: <>187 <div className="arrowDown" /></>,
+            vente: <>187 <div className="arrowDown"/></>,
             localistation: <>Étage 1</>,
             etat: <>OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>11°C</>,
-            vente: <>201 <div className="arrowUp" /></>,
+            vente: <>201 <div className="arrowUp"/></>,
             localistation: <>Étage 2</>,
             etat: <>HS</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>13°C</>,
-            vente: <>236 <div className="arrowUp" /></>,
+            vente: <>236 <div className="arrowUp"/></>,
             localistation: <>Étage 1</>,
             etat: <>OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>12°C</>,
-            vente: <>124 <div className="arrowDown" /></>,
+            vente: <>124 <div className="arrowDown"/></>,
             localistation: <>Rez-de-chausée</>,
             etat: <>Réparation</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>9°C</>,
-            vente: <>187 <div className="arrowUp" /></>,
+            vente: <>187 <div className="arrowUp"/></>,
             localistation: <>Étage 1</>,
             etat: <>OK</>,
+            router: "/distributeurs/12678"
         },
         {
             distrib: <><span className="title">#12678</span></>,
             temp: <>11°C</>,
-            vente: <>201 <div className="arrowUp" /></>,
+            vente: <>201 <div className="arrowUp"/></>,
             localistation: <>Étage 2</>,
             etat: <>HS</>,
+            router: "/distributeurs/12678"
         },
     ]
     const arrayColumns = [
         {
-            Header: 'Distributeur',
+            Header: 'SingleDistributeur',
             accessor: 'distrib',
         },
         {
@@ -196,7 +242,7 @@ export default function SingleSchool({name}) {
                     <p>34 rue de la paix, 75001 Paris</p>
                 </div>
 
-                <Button icon="/assets/images/icons/map.svg" className="btn--primary--reverse" text='Voir la carte' />
+                <Button icon="/assets/images/icons/map.svg" className="btn--primary--reverse" text='Voir la carte'/>
             </div>
             <div className="single-school__content">
                 <div className="principal">
