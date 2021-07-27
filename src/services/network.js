@@ -1,7 +1,7 @@
 export const getSchoolsFromApiAsync = async () => {
     try {
         let response = await fetch(
-            'http://51.103.32.77/schools/',
+            'https://zaaap.fr/schools/',
             {
                 "method": "GET",
                 "accept": "application/json",
@@ -20,7 +20,7 @@ export const getSchoolDetails = async (id) => {
     }
     try {
         let response = await fetch(
-            'http://51.103.32.77/school/'+id,
+            'https://zaaap.fr/school/'+id,
             {
                 "method": "GET"
             }
@@ -38,7 +38,7 @@ export const getSchoolMachines = async (id) => {
     }
     try {
         let response = await fetch(
-            'http://51.103.32.77/school/'+id+'/vendingMachines',
+            'https://zaaap.fr/school/'+id+'/vendingMachines',
             {
                 "method": "GET"
             }
